@@ -1,8 +1,6 @@
+let edad = 18;
 
-let edad = 17;
-
-
-if (edad > 18) {
+if (edad >= 18) {
   console.log("Eres mayor de edad.");
 } else if (edad === 17) {
   console.log("Casi eres mayor de edad.");
@@ -10,9 +8,10 @@ if (edad > 18) {
   console.log("Eres menor de edad.");
 }
 
-let diaSemana = "Miercoles";
-let mensajeDia;
 
+
+let diaSemana = "Martes";
+let mensajeDia;
 
 switch (diaSemana) {
   case "Lunes":
@@ -20,6 +19,7 @@ switch (diaSemana) {
     break;
   case "Martes":
     mensajeDia = "Martes de trabajo.";
+    break;
   case "Miercoles": 
     mensajeDia = "Mitad de semana.";
     break;
@@ -29,9 +29,10 @@ switch (diaSemana) {
 }
 console.log("Mensaje del día: " + mensajeDia);
 
-let temperatura = 25;
-let clima = "soleado";
 
+
+let temperatura = 20;
+let clima = "nublado";
 
 if (temperatura > 20 && clima === "nublado") {
   console.log("Hace calor y está nublado.");
@@ -42,5 +43,5 @@ if (temperatura > 20 && clima === "nublado") {
 }
 
 
-const esAdulto = (edad = 18) ? "Sí" : "No"; 
+const esAdulto = (edad >= 18) ? "Sí" : "No"; 
 console.log("¿Es adulto? " + esAdulto);
