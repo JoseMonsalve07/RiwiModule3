@@ -1,4 +1,4 @@
-//  EJERCICIO 1
+//  Parte 1: Declaración y Asignación de Variables
 
 // 1. Gestionar el nombre de una empresa
 let nombre = "Google";

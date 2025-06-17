@@ -1,4 +1,4 @@
-//  EJERCICIO 2
+//  Parte 2: Identificación de Tipos de Datos
 
 // 1. Verificar el tipo de un código postal
 let postal = "05001";

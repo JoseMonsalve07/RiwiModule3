@@ -1,4 +1,4 @@
-// EJERCICIO 3
+// Parte 3: Operaciones Aritméticas Básicas
 
 // 1. Calcular el saldo final después de un depósito
 let initialBalance = 500;
