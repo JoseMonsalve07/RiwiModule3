@@ -155,3 +155,64 @@
 // for (let letra of "Hola"){
 //     console.log(letra);
 // }
+
+
+
+
+
+// const coder = "Jose"
+// let inverted =
+//     `"Hello", ${coder}
+//     This is an example of the potential
+//     of the use of backticks
+//     year: ${2024+1}`;
+
+// console.log(inverted)
+
+
+
+
+
+// let skills = "HTML, CSS";
+// console.assert(skills.includes("JavaScript"), "the coder does not know javascript")
+
+
+
+
+
+// let option;
+// do{
+//     console.log("1. Say Hello");
+//     console.log("2. Exit"),
+
+//     option = 1; //Simulate user input
+
+//     if (option === 1){
+//         console.log("Hello");
+//     }
+
+//     break;
+// }   while (option !== 2);
+
+
+
+
+
+// const skills = ["HTML", "CSS", "JavaScript"];
+
+// const coder = {
+//     name: "Jose",
+//     age: 28,
+//     company: "Riwi",
+//     skills: skills
+// }
+
+// console.log(coder.name);
+// console.log(coder["skills"][2])
+
+// coder.age = 25;
+// console.log(coder.age)
+
+// coder.country = "Colombia";
+// console.log(coder.country)
+
