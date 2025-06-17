@@ -1,8 +1,7 @@
-
 let contador = 0;
 while (contador < 5) {
   console.log("El contador es: " + contador);
- 
+  contador++;
 }
 
 
@@ -14,7 +13,7 @@ let j = 5;
 do {
   console.log("Valor de j: " + j);
   j--;
-} while (j > 5); /
+} while (j > 5);
 
 const numeros = [1, 2, 3, 4, 5];
 
