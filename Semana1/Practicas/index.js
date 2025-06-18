@@ -216,3 +216,51 @@
 // coder.country = "Colombia";
 // console.log(coder.country)
 
+
+
+
+
+// Objetos definicion en el codigo
+// const persona = {
+//     nombre: "Maria",
+//     edad: 25,
+//     ciudad: "Bogota",
+//     esEstudiante: false,
+//     hobbies: ["pintar", "cocinar"],
+//     direccion: {
+//         calle: "Carrera 10",
+//         numero: 15
+//     }
+// };
+// console.log(persona.nombre);
+// console.log(persona.edad);
+// console.log(persona.esEstudiante);
+// console.log(persona.hobbies[0], persona.hobbies[1])
+// console.log(persona.direccion.calle, persona.direccion.numero)
+
+
+
+
+
+// // Set definicion en el codigo 
+// const miSet = new Set();
+// miSet.add(1);
+// miSet.add(2);
+// miSet.add(3);
+// miSet.add(2); // Este set será ignorado porque ya existe
+// console.log(miSet);
+// miSet.add("hola");
+// miSet.add( { nombre: "Juan" } );
+// console.log(miSet);
+// console.log(miSet.has(1));
+// console.log(miSet.has(4));
+// miSet.delete(2);
+// console.log(miSet);
+
+
+
+
+
+// let nombreDeUsuario = undefined;
+// const nombreParaMostrar = nombreDeUsuario || "Invitado";
+// console.log(`Bienvenido, ${nombreParaMostrar}.`);
