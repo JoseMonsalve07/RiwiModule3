@@ -1,5 +1,5 @@
-// // Sesión 1: Variables y Condicionales
-// // 1. Clasificación de edades
+// Sesión 1: Variables y Condicionales
+// 1. Clasificación de edades
 
 alert("¡Bienvenido/a al clasificador de edades!");
 
