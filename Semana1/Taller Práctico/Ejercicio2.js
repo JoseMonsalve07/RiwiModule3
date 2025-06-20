@@ -26,6 +26,6 @@ if (numberOne == numberTwo && numberOne != numberThree) {
     alert(`Empate entre el número 2 y el número 3: ${numberTwo}`);
 } else if (numberOne == numberTwo && numberTwo == numberThree) {
     alert(`Empate entre los tres números`);
-} else {
+} else { 
     alert(`El número mayor es: ${maxNumber}`);
 }
