@@ -14,5 +14,5 @@ function esCapicua(numero) {
 if (esCapicua(numero) === true){
     alert(`El número ${numero} es capicúa`);
 } else {
-    alert(`El número ${numero} no es capicúa`)
+    alert(`El número ${numero} no es capicúa`);
 }
