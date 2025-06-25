@@ -162,3 +162,123 @@
 // - Los sets permiten trabajar con valores únicos, mientras que los maps manejan pares clave-valor. 
 // - typeof es esencial para verificar el tipo de datos. 
 // - Los bucles for...of y for...in facilitan el recorrido de estructuras de datos. 
+
+
+
+
+
+// Asincronismo
+// console.log("1");
+// setTimeout(() => {
+//     console.log("2");
+// }, 1000);
+// console.log("3");
+
+
+
+
+
+// const miPromesa = new Promise(function(resolve, reject){
+//     let exito = true;
+//     if (exito){
+//         resolve("todo bien");
+//     } else {
+//         reject("algo va mal");
+//     }
+// });
+
+// console.log("Hola mundo");
+
+// async function ejecutarPromesa() {
+//     try {
+//         const resultado = await miPromesa;
+//         console.log(resultado);
+//     } catch (error){
+//         console.log(error);
+//     }
+// }
+
+// ejecutarPromesa();
+
+
+
+
+
+// function Persona(nombre) {
+//     this.nombre = nombre;
+// }
+
+// Persona.prototype.saludar = function() {
+//     console.log(this.nombre);
+// }
+
+// Persona.prototype.saludarA = function(world) {
+//     console.log(world);
+// }
+
+// const pedro = new Persona("pedro");
+
+// pedro.saludar();
+// pedro.saludarA("Hola");
+
+
+
+
+
+// class Persona {
+//     constructor(nombre) {
+//         this.nombre = nombre;
+//     }
+
+//     saludar() {
+//         console.log(`Hola, soy ${this.nombre}`);
+//     }
+// }
+
+// const maria = new Persona('María');
+// maria.saludar();
+
+
+
+
+
+// class Persona {
+
+//      altura ;
+//      peso;
+//      edad;
+//      genero;
+
+//     constructor(peso){
+//         this.peso=peso;
+//     }
+
+//      definirAltura(altura){
+//         this.altura=altura;
+//     }
+
+//      comer(){
+//         console.log("comer");
+//     }
+
+//      correr(){
+//         console.log("corre");
+//     }
+
+//      mostrarAltura(){
+//         console.log(this.altura);
+//     }
+
+//      mostraPeso(){
+//         console.log(this.peso)
+//     }
+// }
+
+
+// const persona1 = new Persona(18);
+// persona1.mostraPeso();
+// persona1.definirAltura(1.75);
+// persona1.mostrarAltura();
+// const persona2 = new Persona(50);
+// persona2.definirAltura(2.18);
+// persona2.mostrarAltura();
