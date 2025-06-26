@@ -40,6 +40,7 @@ let person2 = {
         console.log("La persona camina");
     }
 };
+
 person2.walk();
 console.log("");
 console.log("Persona 3");
