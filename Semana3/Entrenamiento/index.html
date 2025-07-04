@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Productos (CRUD)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>🛒 Gestión de Productos</h1>
+
+  <form id="form-producto">
+    <input type="text" id="nombre" placeholder="Nombre del producto" required />
+    <input type="number" id="precio" placeholder="Precio" required />
+    <input type="hidden" id="producto-id" />
+    <button type="submit">Guardar producto</button>
+  </form>
+
+  <ul id="lista-productos"></ul>
+
+  <script src="gestion_api.js"></script>
+</body>
+</html>

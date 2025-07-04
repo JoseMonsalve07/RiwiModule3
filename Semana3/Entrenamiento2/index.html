@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+</head>
+<body>
+    <h1>Gestión de Productos</h1>
+
+  <div>
+    <input type="text" id="nombre" placeholder="Nombre" />
+    <input type="number" id="precio" placeholder="Precio" />
+    <button onclick="agregarProducto()">Agregar Producto</button>
+  </div>
+
+  <table id="tabla-productos">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</body>
+</html>
+<script src="./gestion_api.js"></script>
