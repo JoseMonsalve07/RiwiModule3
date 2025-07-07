@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MI SPA básica</h1>
+
+    <nav>
+        <a data-route = "inicio" href="#">Inicio</a>
+        <a data-route = "acerca" href="#">Acerca</a>
+    </nav>
+
+    <div id="contenido">
+        <div id="vista-inicio" class="view active">
+            <h2>Bienvenido a la página de inicio</h2>
+            <p>Esta es la vista principal.</p>
+        </div>
+
+        <div id="vista-acerca" class="view">
+            <h2>Acerca de</h2>
+            <p>Esta SPA fue hecha sin recargar la página.</p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
