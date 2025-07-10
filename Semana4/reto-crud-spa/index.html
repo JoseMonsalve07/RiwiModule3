@@ -26,7 +26,7 @@
         <!-- Vista Usuarios -->
         <section id="vista-users" class="view">
             <h1>Lista de Usuarios</h1>
-            <button id="btnAgregar">Agregar Usuario</button>
+            <button id="btnAgregar" type="button">Agregar Usuario</button>
             <table id="tablaUsuarios">
                 <thead>
                     <tr>
@@ -50,11 +50,11 @@
             <span id="cerrarModal" class="cerrar">&times;</span>
             <h3>Agregar nuevo estudiante</h3>
             <form id="formularioUsuario">
-                <input type="text" name="name" placeholder="Name" required />
-                <input type="email" name="email" placeholder="Email" required />
-                <input type="text" name="phone" placeholder="Phone" required />
-                <input type="text" name="enrollNumber" placeholder="Enroll Number" required />
-                <input type="date" name="dateOfAdmission" required />
+                <input type="text" id="nombre" placeholder="Name" required />
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="number" id="telefono" placeholder="Phone" required />
+                <input type="number" id="matricula" placeholder="Enroll Number" required />
+                <input type="date" id="fecha" required />
                 <button type="submit">Guardar</button>
             </form> 
         </div>

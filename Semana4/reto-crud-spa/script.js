@@ -59,6 +59,36 @@ function cargarUsuarios() {
     });
 }
 
+// Referencia al formulario
+const formUsuario = document.getElementById("formularioUsuario");
+
+formUsuario.addEventListener("submit", (e) => {
+    e.preventDefault(); // Evita el comportamiento por defecto (recargar la página)
+
+    const nuevoUsuario = {
+        name: document.getElementById("nombre").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("telefono").value,
+        enrollNumber: document.getElementById("matricula").value,
+        dateOfAdmission: document.getElementById("fecha").value
+    };
+
+    fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(nuevoUsuario)
+    })
+    .then(res => res.json())
+    .then(() => {
+        formUsuario.reset(); // Limpia el formulario
+        modalUsuario.classList.add("oculto"); // Cierra el modal
+        cargarUsuarios(); // Vuelve a mostrar la lista actualizada
+    })
+    .catch(err => console.error("Error al agregar usuario:", err));
+});
+
 const btnNuevoUsuario = document.getElementById("btnAgregar");
 const modalUsuario = document.getElementById("modalUsuario");
 const cerrarModal = document.getElementById("cerrarModal");

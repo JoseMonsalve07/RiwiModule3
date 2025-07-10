@@ -1,3 +1,4 @@
+/* Estilos generales del body */
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
@@ -5,6 +6,11 @@ body {
     padding: 20px;
 }
 
+h1 {
+    text-align: center;
+}
+
+/* Estilo del formulario */
 form {
     background-color: #fff;
     padding: 20px;
@@ -14,12 +20,14 @@ form {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Estilo para las etiquetas de los inputs */
 label {
     display: block;
     margin-top: 10px;
     font-weight: bold;
 }
 
+/* Estilo para los campos de entrada */
 input {
     width: 100%;
     padding: 8px;
@@ -29,6 +37,7 @@ input {
     border-radius: 4px;
 }
 
+/* Estilo general de los botones */
 button {
     margin-top: 15px;
     padding: 10px 15px;
@@ -39,15 +48,18 @@ button {
     cursor: pointer;
 }
 
+/* Estilo para el botón de limpiar */
 button[type="button"] {
     background-color: #f44336;
     margin-left: 10px;
 }
 
+/* Efecto hover para los botones */
 button:hover {
     opacity: 0.9;
 }
 
+/* Estilo para los contenedores de salida */
 #output, #contadorOutput {
     margin-top: 20px;
     text-align: center;
