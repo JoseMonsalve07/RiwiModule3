@@ -1,0 +1,68 @@
+/* Estilos generales del body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Estilo del formulario */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Estilo para las etiquetas de los inputs */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Estilo para los campos de entrada */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo general de los botones */
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilo para el botón de limpiar */
+button[type="button"] {
+    background-color: #f44336;
+    margin-left: 10px;
+}
+
+/* Efecto hover para los botones */
+button:hover {
+    opacity: 0.9;
+}
+
+/* Estilo para los contenedores de salida */
+#output, #contadorOutput {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #333;
+}

@@ -1,0 +1,29 @@
+<!-- Ejemplo práctico con sessionStorage
+Aquí un ejemplo para contar cuántas veces se ha hecho clic en un botón durante la sesión: -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>sessionStorage Demo</title>
+</head>
+<body>
+  <h1>Clicks en esta sesión: <span id="contador">0</span></h1>
+  <button onclick="contarClick()">Haz click</button>
+
+  <script>
+    function contarClick() {
+      let contador = sessionStorage.getItem("clicks") || 0;
+      contador = parseInt(contador) + 1;
+      sessionStorage.setItem("clicks", contador);
+      document.getElementById("contador").textContent = contador;
+    }
+
+    // Mostrar valor actual al cargar
+    window.onload = function () {
+      const contador = sessionStorage.getItem("clicks") || 0;
+      document.getElementById("contador").textContent = contador;
+    };
+  </script>
+</body>
+</html>
