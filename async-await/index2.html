@@ -1,0 +1,43 @@
+<!-- 🧪 Ejemplo completo: Promesa que puede cumplirse o fallar -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Promesa con éxito o error</title>
+</head>
+<body>
+  <h1>Promesa con resolve y reject</h1>
+  <button id="btn">Intentar</button>
+  <p id="mensaje"></p>
+
+  <script>
+    function tareaAleatoria() {
+      return new Promise((resolve, reject) => {
+        const exito = Math.random() > 0.5; // 50% de probabilidad
+
+        setTimeout(() => {
+          if (exito) {
+            resolve("✅ ¡Éxito! La tarea terminó bien.");
+          } else {
+            reject("❌ Error: la tarea falló.");
+          }
+        }, 2000);
+      });
+    }
+
+    async function manejarIntento() {
+      const mensaje = document.getElementById("mensaje");
+      mensaje.textContent = "⏳ Procesando...";
+
+      try {
+        const resultado = await tareaAleatoria(); // espera el resultado
+        mensaje.textContent = resultado;
+      } catch (error) {
+        mensaje.textContent = error; // si falla, muestra el mensaje de error
+      }
+    }
+
+    document.getElementById("btn").addEventListener("click", manejarIntento);
+  </script>
+</body>
+</html>

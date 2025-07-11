@@ -1,0 +1,33 @@
+<!-- 🧪 EJEMPLO 1: Simulando una tarea que tarda -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo async/await</title>
+</head>
+<body>
+  <h1>Ejemplo con async/await</h1>
+  <button id="btn">Haz clic para esperar</button>
+  <p id="resultado"></p>
+
+  <script>
+    function esperarSegundos(segundos) {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve(`Han pasado ${segundos} segundos`);
+        }, segundos * 1000);
+      });
+    }
+
+    async function manejarClick() {
+      document.getElementById("resultado").textContent = "Esperando...";
+      
+      const mensaje = await esperarSegundos(5); // espera 5 segundos
+
+      document.getElementById("resultado").textContent = mensaje;
+    }
+
+    document.getElementById("btn").addEventListener("click", manejarClick);
+  </script>
+</body>
+</html>

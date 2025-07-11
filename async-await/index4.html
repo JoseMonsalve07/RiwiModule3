@@ -1,0 +1,60 @@
+<!-- 🧪 RETO: Generar un número aleatorio -->
+<!-- 🔥 RETO 2: Encadenar dos tareas asincrónicas
+Enunciado:
+
+Usa la misma función obtenerNumero() como primer paso.
+
+Luego, si el primer número fue exitoso, espera otro número aleatorio con otra llamada a obtenerNumero().
+
+Si ambos números pasan la condición (mayor o igual a 0.3), muestra:
+
+✅ Todo bien. Números: 0.74 y 0.82
+
+Si cualquiera de los dos falla, muestra el error correspondiente. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto: Número aleatorio</title>
+</head>
+<body>
+    <h1>Número Aleatorio</h1>
+    <button id="btn">Generar número</button>
+    <p id="resultado"></p>
+
+    <script>
+        function obtenerNumero() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const numero = Math.random();
+                    if (numero >= 0.3) {
+                        resolve(numero.toFixed(2));
+                    } else {
+                        reject(`Mal, demasiado bajo.`);
+                    }
+                }, 2000);
+            });
+        }
+
+        async function mostrarResultado() {
+            const resultado = document.getElementById("resultado");
+            resultado.textContent = "Espera...";
+
+            try {
+                const mensaje = await obtenerNumero();
+                resultado.innerHTML = `Primer número generado: ${mensaje}<br>Generando segundo número...`;
+
+                const mensaje2 = await obtenerNumero();
+                resultado.innerHTML = `Bien. Números generados correctamente:<br> ${mensaje} y ${mensaje2};`
+                
+            } catch (error) {
+                resultado.textContent = `Error: ${error}`;
+            }
+        }
+
+        document.getElementById("btn").addEventListener('click', mostrarResultado)
+    </script>
+</body>
+</html>

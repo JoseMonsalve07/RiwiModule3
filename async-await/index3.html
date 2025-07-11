@@ -1,0 +1,66 @@
+<!-- 🧪 RETO: Generar un número aleatorio -->
+<!-- 🎯 Enunciado:
+Crea una función llamada obtenerNumero().
+
+Esa función debe:
+
+Esperar 2 segundos (simula algo que tarda).
+
+Generar un número aleatorio entre 0 y 1.
+
+Si el número es mayor o igual a 0.3, usa resolve(numero).
+
+Si el número es menor a 0.3, usa reject("Número demasiado bajo").
+
+Luego, al hacer clic en un botón, debes:
+
+Mostrar "Cargando..."
+
+Esperar el resultado de obtenerNumero().
+
+Mostrar el número si fue exitoso.
+
+O mostrar el mensaje de error si falló. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto: Número aleatorio</title>
+</head>
+<body>
+    <h1>Número Aleatorio</h1>
+    <button id="btn">Generar número</button>
+    <p id="resultado"></p>
+
+    <script>
+        function obtenerNumero() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const numero = Math.random();
+                    if (numero >= 0.3) {
+                        resolve(`Bien. Número generado : ${numero.toFixed(2)}`);
+                    } else {
+                        reject(`Mal, demasiado bajo. Número generado: ${numero.toFixed(2)}`);
+                    }
+                }, 2000);
+            });
+        }
+
+        async function mostrarResultado() {
+            const resultado = document.getElementById("resultado");
+            resultado.textContent = "Espera...";
+
+            try {
+                const mensaje = await obtenerNumero();
+                resultado.textContent = mensaje;
+            } catch (error) {
+                resultado.textContent = error;
+            }
+        }
+
+        document.getElementById("btn").addEventListener('click', mostrarResultado)
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!-- 🧪 RETO: Verificar Dos Usuarios en Paralelo
+🎯 Enunciado:
+Crea una función llamada verificarUsuario(nombre) que:
+
+Espere 1 segundo.
+
+Genere un número aleatorio entre 0 y 1.
+
+Si el número es mayor o igual a 0.4, resuelve con ✅ [nombre] verificado.
+
+Si no, rechaza con ❌ [nombre] no encontrado.
+
+Al hacer clic en un botón:
+
+Muestra el mensaje: "Verificando usuarios...".
+
+Usa Promise.all para verificar al usuario A y al usuario B al mismo tiempo.
+
+Si ambos son verificados:
+
+Muestra los dos mensajes de éxito (uno debajo del otro).
+
+Si alguno falla:
+
+Muestra el error (no continuar si falla uno). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios: Promise.all</title>
+</head>
+
+<body>
+    <h1>Verificación de Usuarios</h1>
+    <button id="btn">Verificar</button>
+    <p id="output"></p>
+
+    <script>
+        function verificarUsuario(nombre) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const numero = Math.random();
+                    if (numero >= 0.4) {
+                        resolve(`✅${nombre} verificado.`)
+                    } else {
+                        reject(`❌${nombre} no encontrado.`)
+                    }
+                }, 1000);
+            });
+        }
+
+        async function manejarClic() {
+            let salida = document.getElementById("output");
+            salida.textContent = "Verificando usuarios...";
+
+            try{
+                const [usuario1, usuario2] = await Promise.all([
+                    verificarUsuario("Usuario A"),
+                    verificarUsuario("Usuario B")
+
+                ])
+
+                salida.innerHTML = `${usuario1}<br>${usuario2}`
+            } catch(error) {
+                salida.textContent = error;
+            }
+        }
+        document.getElementById("btn").addEventListener("click", manejarClic);
+    </script>
+</body>
+</html>

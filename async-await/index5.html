@@ -1,0 +1,64 @@
+<!-- 🧪 Ejercicio: Verificar Usuario
+🎯 Enunciado:
+Crea una función llamada verificarUsuario().
+
+Esa función debe:
+
+Esperar 1.5 segundos (simula una verificación en el servidor).
+
+Generar un número aleatorio entre 0 y 1.
+
+Si el número es mayor a 0.4, resuelve con "✅ Usuario verificado".
+
+Si es menor o igual a 0.4, rechaza con "❌ Usuario no encontrado".
+
+Al hacer clic en el botón:
+
+Mostrar "Verificando usuario...".
+
+Esperar el resultado de verificarUsuario().
+
+Mostrar el mensaje correspondiente (éxito o error). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Usuario</title>
+</head>
+<body>
+    <h1>Verificar Usuario</h1>
+    <button id="resultado">Verificar</button>
+    <p id="mostrar"></p>
+
+    <script>
+        function verificarUsuario() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const numero = Math.random();
+                    if (numero > 0.4) {
+                        resolve("✅ Usuario verificado");
+                    } else {
+                        reject("❌ Usuario no encontrado");
+                    }
+                }, 1500);
+            });
+        }
+
+        async function manejarClic() {
+            const resultado = document.getElementById("mostrar");
+            resultado.textContent = "Verificando usuario..."
+
+            try{
+                const mensaje = await verificarUsuario();
+                resultado.textContent = mensaje;
+            } catch (err) {
+                resultado.textContent = err;
+            }
+        }
+
+        document.getElementById("resultado").addEventListener("click", manejarClic)
+    </script>
+</body>
+</html>

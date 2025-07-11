@@ -1,0 +1,10 @@
+{
+    "usuarios": [
+        { "id": 1, "user": "Ana", "edad": 25, "role": "user", "password": 1234 },
+        { "id": 2, "user": "Luis", "edad": 30, "role": "admin", "password": 1234 }
+    ],
+    
+    "products": [
+        { "id": 1, "name": "moto", "price": 3000 }
+    ]
+}
